@@ -13,8 +13,14 @@ return new class extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('image_path')->nullable();
+            $table->string('release_date')->nullable();
             $table->timestamps();
+            
         });
+
+    
     }
 
     /**
